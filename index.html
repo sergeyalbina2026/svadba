@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Сергей & Альбина | Свадебное приглашение</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600&family=Sacramento&display=swap" rel="stylesheet">
@@ -24,6 +25,7 @@
             position: relative;
         }
 
+        /* Фон с жемчугом и блёстками */
         body::before {
             content: '';
             position: fixed;
@@ -128,12 +130,14 @@
             width: 260px;
             height: auto;
             border-radius: 30px;
-            box-shadow: 0 20px 35px -5px rgba(0, 0, 0, 0.4), 0 0 20px 5px rgba(197, 165, 114, 0.7);
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(197, 165, 114, 0.3), 0 0 25px rgba(197, 165, 114, 0.6);
+            filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+            transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
         }
         .rings-container img:hover {
             transform: scale(1.02);
-            box-shadow: 0 25px 45px -5px rgba(0, 0, 0, 0.5), 0 0 28px 8px rgba(197, 165, 114, 0.8);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(197, 165, 114, 0.5), 0 0 35px rgba(197, 165, 114, 0.8);
+            filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.35));
         }
         .rings-container .fallback {
             display: none;
@@ -283,9 +287,8 @@
             margin-bottom: 15px;
         }
 
-        /* Увеличенный и неразрывный текст */
         .love-text {
-            font-size: 2.4rem;
+            font-size: 2rem;
             max-width: 700px;
             margin: 40px auto;
             color: #5e4b36;
@@ -356,7 +359,7 @@
         }
         .venue h3 {
             font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             color: #b58d62;
             margin-bottom: 20px;
             font-weight: 600;
@@ -395,12 +398,7 @@
             font-size: 1.2rem;
             color: #a0815a;
             margin-top: 20px;
-        }
-        /* Перенос длинной фразы */
-        .rsvp-request {
-            line-height: 1.4;
-            max-width: 100%;
-            word-wrap: break-word;
+            white-space: nowrap;
         }
 
         .footer {
@@ -422,17 +420,17 @@
             .month, .greeting-title { font-size: 2rem; }
             .greeting-title { white-space: normal; font-size: 1.6rem; line-height: 1.2; }
             .background-date span { font-size: 8vh; }
-            .love-text { font-size: 2rem; white-space: normal; } /* на мобильных допустим перенос, но постараемся не разбивать */
+            .love-text { font-size: 1.6rem; white-space: nowrap; }
+            .venue h3 { font-size: 1.8rem; white-space: nowrap; }
+            .final-message p:first-of-type { font-size: 1.4rem; white-space: nowrap; }
+            .final-message .small { font-size: 1rem; white-space: nowrap; }
             .venue-address { font-size: 1.3rem; white-space: nowrap; }
             .greeting-content { font-size: 1.2rem; }
             .time-line { flex-direction: column; gap: 5px; margin-bottom: 10px; }
             .event-desc { margin-left: 0; }
-            .venue h3 { font-size: 2rem; white-space: normal; } /* чтобы на мобильных не ломалось */
         }
         @media (max-width: 550px) {
             .greeting-title { font-size: 1.4rem; }
-            .love-text { font-size: 1.8rem; white-space: normal; }
-            .venue h3 { font-size: 1.8rem; white-space: normal; }
         }
         @media (max-width: 500px) {
             .venue-address { font-size: 1rem; }
@@ -442,9 +440,14 @@
             .ampersand { font-size: 2.2rem; }
             .invitation-title { font-size: 1.8rem; }
             .footer { font-size: 1rem; }
+            .love-text { font-size: 1.4rem; white-space: nowrap; }
+            .final-message p:first-of-type { font-size: 1.2rem; white-space: nowrap; }
+            .final-message .small { font-size: 0.9rem; white-space: nowrap; }
+            .venue h3 { font-size: 1.6rem; white-space: nowrap; }
         }
         @media (max-width: 400px) {
             .venue-address { font-size: 0.9rem; }
+            .love-text { font-size: 1.3rem; white-space: nowrap; }
         }
     </style>
 </head>
@@ -499,8 +502,8 @@
             <div class="greeting-card reveal">
                 <div class="greeting-title">Дорогие Дмитрий и Ксения!</div>
                 <div class="greeting-content">
-                    <p>Приглашаем отпраздновать самое важное событие нашей жизни — свадьбу!</p>
-                    <p>Будем рады разделить<br>этот день с вами</p>
+                    <p>Приглашаем отпраздновать самое важное событие нашей жизни — наша свадьба!</p>
+                    <p>Будем рады разделить этот день с вами</p>
                 </div>
             </div>
         </div>
@@ -534,7 +537,7 @@
 
         <div class="final-message reveal">
             <p>Будем рады видеть вас!</p>
-            <p class="rsvp-request">Просим подтвердить Ваше присутствие<br>в нашем общем чате.</p>
+            <p>Просим подтвердить Ваше присутствие в нашем общем чате.</p>
             <p class="small">С любовью, Сергей & Альбина ❤️</p>
         </div>
 
