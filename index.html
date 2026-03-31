@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Сергей & Альбина | Свадебное приглашение</title>
-    <!-- Google Fonts с font-display: swap -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600&family=Sacramento&display=swap" rel="stylesheet">
+    <!-- Font Awesome (иконки, не влияют на шрифты) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -17,7 +14,8 @@
         }
 
         body {
-            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            /* Системные шрифты, одинаковые на всех устройствах */
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background-color: #faf5ec;
             color: #2e2b28;
             overflow-x: hidden;
@@ -83,7 +81,7 @@
             top: 50%;
             left: 20px;
             transform: translateY(-50%);
-            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-family: Georgia, 'Times New Roman', serif;
             font-weight: 900;
             color: rgba(200, 170, 140, 0.3);
             line-height: 0.9;
@@ -160,8 +158,9 @@
             margin: 10px auto;
         }
 
+        /* Рукописный шрифт — системный cursive */
         .invitation-title {
-            font-family: 'Sacramento', 'Brush Script MT', cursive;
+            font-family: cursive;
             font-size: 3rem;
             color: #b58d62;
             text-align: center;
@@ -176,7 +175,7 @@
             grid-template-columns: 1fr auto 1fr;
             align-items: center;
             gap: 10px;
-            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-family: Georgia, 'Times New Roman', serif;
             font-size: 4.5rem;
             font-weight: 700;
             color: #3a2c1f;
@@ -191,7 +190,7 @@
             white-space: nowrap;
         }
         .ampersand {
-            font-family: 'Sacramento', 'Brush Script MT', cursive;
+            font-family: cursive;
             font-size: 4rem;
             color: #c7a87b;
             text-align: center;
@@ -217,7 +216,7 @@
             flex-direction: column;
         }
         .month, .greeting-title {
-            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-family: Georgia, 'Times New Roman', serif;
             font-size: 2.2rem;
             font-weight: 600;
             margin-bottom: 15px;
@@ -255,7 +254,7 @@
             border-radius: 50%;
             font-size: 1rem;
             background: rgba(255,255,255,0.4);
-            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-family: Georgia, 'Times New Roman', serif;
         }
         .day.highlight {
             background: #c7a87b;
@@ -277,7 +276,7 @@
 
         .greeting-content {
             font-size: 1.4rem;
-            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-family: Georgia, 'Times New Roman', serif;
             color: #5e4b36;
             line-height: 1.5;
             font-style: italic;
@@ -296,7 +295,7 @@
             border-bottom: 1px solid #e1cfb5;
             padding: 20px 0;
             text-align: center;
-            font-family: 'Sacramento', 'Brush Script MT', cursive;
+            font-family: cursive;
             font-weight: 400;
             white-space: nowrap;
         }
@@ -311,7 +310,7 @@
             border: 1px solid #e8d9c4;
         }
         .schedule h2 {
-            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-family: Georgia, 'Times New Roman', serif;
             font-size: 3rem;
             color: #3a2c1f;
             margin-bottom: 30px;
@@ -335,7 +334,7 @@
             font-weight: 700;
             color: #b58d62;
             min-width: 100px;
-            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-family: Georgia, 'Times New Roman', serif;
         }
         .event-title {
             font-size: 1.4rem;
@@ -358,7 +357,7 @@
             border-radius: 70px;
         }
         .venue h3 {
-            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-family: Georgia, 'Times New Roman', serif;
             font-size: 2.2rem;
             color: #b58d62;
             margin-bottom: 20px;
@@ -367,7 +366,7 @@
         }
         .venue-name {
             font-size: 2.8rem;
-            font-family: 'Sacramento', 'Brush Script MT', cursive;
+            font-family: cursive;
             color: #b58d62;
             margin-bottom: 10px;
             text-shadow: 0 0 10px rgba(255,215,150,0.5);
@@ -375,7 +374,7 @@
         }
         .venue-address {
             font-size: 1.8rem;
-            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-family: Georgia, 'Times New Roman', serif;
             color: #3a2c1f;
             white-space: nowrap;
         }
@@ -389,7 +388,7 @@
             padding: 40px;
             border-radius: 80px;
             border: 2px solid #e4cfb8;
-            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-family: Georgia, 'Times New Roman', serif;
         }
         .final-message p {
             margin-bottom: 15px;
