@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Сергей & Альбина | Свадебное приглашение</title>
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -282,6 +281,11 @@
             margin-bottom: 15px;
         }
 
+        /* Запрещаем перенос ключевой фразы */
+        .no-wrap {
+            white-space: nowrap;
+        }
+
         .love-text {
             font-size: 2rem;
             max-width: 700px;
@@ -336,12 +340,19 @@
             font-size: 1.4rem;
             color: #3a2c1f;
             font-weight: 500;
+            text-transform: capitalize;
         }
         .event-desc {
             font-size: 1.2rem;
             color: #6b5e4e;
             margin-left: 100px;
             margin-top: 0;
+        }
+        .event-desc div {
+            margin-bottom: 5px;
+        }
+        .event-desc div:last-child {
+            margin-bottom: 0;
         }
 
         .venue {
@@ -498,7 +509,7 @@
                 <div class="greeting-title">Дорогие</div>
                 <div class="greeting-title" style="font-size: 1.8rem; margin-top: -10px;">Дмитрий и Ксения!</div>
                 <div class="greeting-content">
-                    <p>Приглашаем отпраздновать самое важное событие нашей жизни — свадьбу!</p>
+                    <p>Приглашаем отпраздновать самое важное событие <span class="no-wrap">нашей жизни — свадьбу!</span></p>
                     <p>Будем рады разделить этот день с вами</p>
                 </div>
             </div>
@@ -513,14 +524,17 @@
             <div class="schedule-item">
                 <div class="time-line">
                     <div class="time">17:00</div>
-                    <div class="event-title">сбор гостей</div>
+                    <div class="event-title">Сбор гостей</div>
                 </div>
-                <div class="event-desc">фуршет, церемония бракосочетания</div>
+                <div class="event-desc">
+                    <div>фуршет</div>
+                    <div>Церемония бракосочетания</div>
+                </div>
             </div>
             <div class="schedule-item">
                 <div class="time-line">
                     <div class="time">18:00</div>
-                    <div class="event-title">свадебный банкет</div>
+                    <div class="event-title">Свадебный банкет</div>
                 </div>
             </div>
         </section>
